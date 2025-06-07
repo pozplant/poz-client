@@ -5,21 +5,26 @@
   "scripts": {
     "prebuild": "expo prebuild --clean",
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "web": "expo start --web",
-    "build:dev": "",
-    "build:prod": "",
+    "build:dev": "eas build --profile development",
+    "build:prod": "eas build --profile production",
     "lint": "expo lint"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
+    "@react-native-firebase/analytics": "^22.2.0",
+    "@react-native-firebase/app": "^22.2.0",
+    "@react-native-firebase/crashlytics": "^22.2.0",
     "@react-navigation/bottom-tabs": "^7.3.10",
     "@react-navigation/elements": "^2.3.8",
     "@react-navigation/native": "^7.1.6",
     "expo": "~53.0.10",
     "expo-blur": "~14.1.5",
+    "expo-build-properties": "~0.14.6",
     "expo-constants": "~17.1.6",
+    "expo-dev-client": "~5.2.0",
     "expo-font": "~13.3.1",
     "expo-haptics": "~14.1.4",
     "expo-image": "~2.2.0",
@@ -43,9 +48,9 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@types/react": "~19.0.10",
-    "typescript": "~5.8.3",
     "eslint": "^9.25.0",
-    "eslint-config-expo": "~9.2.0"
+    "eslint-config-expo": "~9.2.0",
+    "typescript": "~5.8.3"
   },
   "private": true
 }
