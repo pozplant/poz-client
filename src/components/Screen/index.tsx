@@ -1,13 +1,14 @@
 import React from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { Edges, SafeAreaView } from "react-native-safe-area-context";
 
 type Props = React.PropsWithChildren<{
+  edges?: Edges;
   className?: string;
 }>;
 
-function Screen({ children, className }: Props) {
+function Screen({ edges, children, className }: Props) {
   return (
-    <SafeAreaView className={`flex-1 bg-white ${className}`}>
+    <SafeAreaView edges={edges} className={`flex-1 bg-white ${className}`}>
       {children}
     </SafeAreaView>
   );

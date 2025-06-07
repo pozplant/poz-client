@@ -12,6 +12,7 @@
       "bundleIdentifier": "com.poz.plant",
       "googleServicesFile": "./config/GoogleService-Info.plist",
       "supportsTablet": false,
+      "usesAppleSignIn": true,
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
@@ -57,11 +58,25 @@
         {
           "ios": {
             "useFrameworks": "static"
+          },
+          "android": {
+            "extraMavenRepos": [
+              "https://devrepo.kakao.com/nexus/content/groups/public/"
+            ]
           }
         }
       ],
       "@react-native-firebase/app",
-      "@react-native-firebase/crashlytics"
+      "@react-native-firebase/crashlytics",
+      "@react-native-google-signin/google-signin",
+      "expo-apple-authentication",
+      [
+        "@react-native-seoul/kakao-login",
+        {
+          "kakaoAppKey": "5a83aa9fb9a2e2ef09d0d08ae3a930bc",
+          "kotlinVersion": "1.9.0"
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
