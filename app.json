@@ -42,6 +42,17 @@
         }
       ],
       [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/HakgyoansimDunggeunmisoOTF-B.otf",
+            "./assets/fonts/Pretendard-Bold.otf",
+            "./assets/fonts/Pretendard-Medium.otf",
+            "./assets/fonts/Pretendard-Regular.otf"
+          ]
+        }
+      ],
+      [
         "expo-build-properties",
         {
           "ios": {
