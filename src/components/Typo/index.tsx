@@ -16,10 +16,10 @@ type Props = TextProps & {
 };
 
 const variantStylesMap: Record<TypoVariant, string> = {
-  Title: "font-primary text-4xl",
-  H1: "font-PB text-3xl",
-  H2: "font-PB text-2xl",
-  H3: "font-PB text-xl",
+  Title: "font-PB text-4xl",
+  H1: "font-primary text-3xl",
+  H2: "font-primary text-2xl",
+  H3: "font-primary text-xl",
   Label: "font-PB text-lg",
   B1: "font-PM text-base",
   B2: "font-PM text-sm",
