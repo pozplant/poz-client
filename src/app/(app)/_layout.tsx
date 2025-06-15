@@ -1,10 +1,10 @@
-import { Redirect, Stack } from "expo-router";
+import { Stack } from "expo-router";
 import React from "react";
 
 function AppLayout() {
   const isLoggedIn = false;
 
-  if (!isLoggedIn) return <Redirect href={"/auth"} />;
+  //   if (!isLoggedIn) return <Redirect href={"/auth"} />;
 
   return (
     <Stack screenOptions={{ headerShown: false }}>
