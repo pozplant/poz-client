@@ -6,7 +6,7 @@ import { TouchableOpacity, View } from "react-native";
 
 function HomeNavigator() {
   return (
-    <View className="flex flex-row items-center justify-center gap-[52px] px-[40px] py-[16px] bg-white border border-neutral-200 rounded-full">
+    <View className="flex flex-row items-center justify-center gap-[52px] px-[40px] py-[12px] bg-white border border-neutral-200 rounded-full">
       <TouchableOpacity className="items-center justify-center gap-1">
         <Icon name="message" />
         <Typo variant="B2">대화하기</Typo>

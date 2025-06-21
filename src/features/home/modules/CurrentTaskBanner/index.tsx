@@ -40,7 +40,7 @@ function CurrentTaskBanner() {
   }, [hasTask]);
 
   return (
-    <Animated.View style={animatedStyles}>
+    <Animated.View style={animatedStyles} className={"w-full"}>
       <TouchableOpacity className="flex flex-col gap-1 px-[16px] py-[8px] border-4 bg-primary rounded-xl border-black/20">
         <View className="flex flex-row items-center justify-between">
           <Typo variant="B1" className="text-white">
