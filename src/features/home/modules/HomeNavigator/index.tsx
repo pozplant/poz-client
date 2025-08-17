@@ -13,9 +13,9 @@ function HomeNavigator() {
       </TouchableOpacity>
 
       <TouchableOpacity className="items-center justify-center gap-1">
-        <Icon name="wand" color={theme.primary} />
+        <Icon name="calendar" color={theme.primary} />
         <Typo variant="B2" className="text-primary">
-          AI 진단
+          달력 보기
         </Typo>
       </TouchableOpacity>
 
