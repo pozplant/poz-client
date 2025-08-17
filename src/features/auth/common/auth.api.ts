@@ -1,1 +1,1 @@
-export type ISocialProvider = "google" | "apple" | "kakao";
+export type ISocialProvider = "google" | "kakao" | "apple";

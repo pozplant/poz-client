@@ -1,15 +1,30 @@
-import { ISocialProvider } from "../common/auth.api";
+import { useState } from "react";
+import { authenticateApi } from "../common/auth.api";
+
+export type ISocialProvider = "google" | "kakao" | "apple";
 
 function useAuthenticate() {
-  return async (by: { provider: ISocialProvider; id: string }) => {
-    try {
-      const { provider, id } = by;
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-      console.log(provider, id);
-    } catch (err) {
-      console.error(err);
+  const authenticate = async (provider: ISocialProvider, token: string) => {
+    try {
+      setLoading(true);
+      setError(null);
+
+      const response = await authenticateApi(provider, token);
+      console.log("로그인 성공:", response);
+      return response;
+    } catch (err: any) {
+      console.error("로그인 실패:", err);
+      setError(err.message);
+      throw err;
+    } finally {
+      setLoading(false);
     }
   };
+
+  return { authenticate, loading, error };
 }
 
 export default useAuthenticate;

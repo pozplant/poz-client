@@ -6,13 +6,19 @@ import { TouchableOpacity } from "react-native";
 import useAuthenticate from "../../hooks/useAuthenticate";
 
 function AppleLogin() {
-  const authenticate = useAuthenticate();
+  const { authenticate } = useAuthenticate();
 
   const handlePress = async () => {
     try {
-      const { user } = await AppleAuthentication.signInAsync();
+      const credential = await AppleAuthentication.signInAsync({
+        requestedScopes: [
+          AppleAuthentication.AppleAuthenticationScope.FULL_NAME,
+          AppleAuthentication.AppleAuthenticationScope.EMAIL,
+        ],
+      });
+      if (!credential.identityToken) throw new Error("Apple 토큰 없음");
 
-      await authenticate({ provider: "apple", id: user });
+      await authenticate("apple", credential.identityToken);
     } catch (err) {
       console.error(err);
     }
@@ -24,7 +30,6 @@ function AppleLogin() {
       className="h-[60px] flex flex-row items-center justify-center gap-3 rounded-xl bg-black"
     >
       <Icon name="apple" />
-
       <Typo variant="Label" className="text-white">
         Apple로 시작하기
       </Typo>
