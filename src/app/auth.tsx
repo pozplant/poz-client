@@ -14,8 +14,8 @@ function AuthScreen() {
       </View>
 
       <View className="flex flex-col gap-3 p-5 pb-10">
-        <KakaoLogin />
         <GoogleLogin />
+        <KakaoLogin />
         <AppleLogin />
       </View>
     </Screen>
