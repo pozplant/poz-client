@@ -14,8 +14,11 @@ function HomeScreen() {
         <HomeHeader />
       </View>
 
-      <View className="flex-1 items-center justify-center bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(239,239,239,1)_100%)]">
-        <Character />
+      <View className="flex-1 flex-col items-center justify-center bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(239,239,239,1)_100%)]">
+        <Character
+          messages="{messages}"
+          nickname="{nickname}"
+        />
       </View>
 
       <View className="flex flex-col gap-4 p-6 pb-10 rounded-[20px_20px_0px_0px]">
