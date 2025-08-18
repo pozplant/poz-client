@@ -1,7 +1,7 @@
-import Icon from "@src/Icon";
-import Typo from "@src/Typo";
 import React, { useState } from "react";
 import { LayoutAnimation, Platform, TouchableOpacity, UIManager, View } from "react-native";
+import Icon from "../Icon";
+import Typo from "../Typo";
 
 if (Platform.OS === "android" && UIManager.setLayoutAnimationEnabledExperimental) {
   UIManager.setLayoutAnimationEnabledExperimental(true);

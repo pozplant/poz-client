@@ -1,11 +1,11 @@
-import Character from "@src/components/Character";
-import Screen from "@src/components/Screen";
-import CharacterStats from "@src/features/home/modules/CharacterStats";
-import CurrentTaskBanner from "@src/features/home/modules/CurrentTaskBanner";
-import HomeHeader from "@src/features/home/modules/HomeHeader";
-import HomeNavigator from "@src/features/home/modules/HomeNavigator";
 import React from "react";
 import { View } from "react-native";
+import Character from "../components/Character";
+import Screen from "../components/Screen";
+import CharacterStats from "../features/home/modules/CharacterStats";
+import CurrentTaskBanner from "../features/home/modules/CurrentTaskBanner";
+import HomeHeader from "../features/home/modules/HomeHeader";
+import HomeNavigator from "../features/home/modules/HomeNavigator";
 
 function HomeScreen() {
   return (

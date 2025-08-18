@@ -1,10 +1,10 @@
-import Accordion from "@src/components/Accordion";
-import Back from "@src/components/Back";
-import Btn from "@src/components/Btn";
-import GuideText from "@src/components/GuideText";
-import Screen from "@src/components/Screen";
 import React from "react";
 import { View } from "react-native";
+import Accordion from "../components/Accordion";
+import Back from "../components/Back";
+import Btn from "../components/Btn";
+import GuideText from "../components/GuideText";
+import Screen from "../components/Screen";
 
 function TermsScreen() {
     return (
