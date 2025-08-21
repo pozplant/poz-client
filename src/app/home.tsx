@@ -21,7 +21,7 @@ function HomeScreen() {
         />
       </View>
 
-      <View className="flex flex-col gap-4 p-6 pb-10 rounded-[20px_20px_0px_0px]">
+      <View className="-mt-6 flex flex-col gap-4 p-6 pb-10 rounded-[20px_20px_0px_0px]">
         <CharacterStats />
         <CurrentTaskBanner />
         <HomeNavigator />
