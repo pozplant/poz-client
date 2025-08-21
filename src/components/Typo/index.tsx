@@ -9,7 +9,8 @@ type TypoVariant =
   | "Label"
   | "B1"
   | "B2"
-  | "Caption";
+  | "Caption"
+  | "DNF";
 
 type Props = TextProps & {
   variant: TypoVariant;
@@ -24,6 +25,7 @@ const variantStylesMap: Record<TypoVariant, string> = {
   B1: "font-PM text-base",
   B2: "font-PM text-sm",
   Caption: "font-PR text-xs",
+  DNF: "font-DNF text-xs"
 };
 
 function Typo({ variant, className, children, ...rest }: Props) {
