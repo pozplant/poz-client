@@ -9,6 +9,7 @@ module.exports = {
         PB: "Pretendard-Bold",
         PM: "Pretendard-Medium",
         PR: "Pretendard-Regular",
+        DNF: "DNFBitBitv2"
       },
       colors: {
         primary: "#367B4D",
